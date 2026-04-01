@@ -1,20 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World! my name is oleeeg");
+        BankAccount viktor = new BankAccount(342434534534L, "Viktor", 1000);
+        BankAccount maria = new BankAccount(67890, "Maria", 500);
+        BankAccount anna = new BankAccount(11111, "Anna");
 
-        int age;
-        double price;
-        boolean isAdult;
-        char initial;
+        System.out.println("Всего создано счетов: " + BankAccount.getCount());
 
-        age = 30;
-        price = 19.99;
-        isAdult = true;
-        initial = 'K';
+        viktor.showBalance();
+        maria.showBalance();
+        anna.showBalance();
 
-        System.out.println(age);
-        System.out.println(price);
-        System.out.println(isAdult);
-        System.out.println(initial);
+        viktor.deposit(200);
+        viktor.withdraw(300);
+        viktor.transfer(maria, 400);
+        viktor.addInterest(5);
+
+        viktor.displayAccountInfo();
+        maria.displayAccountInfo();
     }
 }

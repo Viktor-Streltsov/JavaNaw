@@ -1,21 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        BankAccount viktor = new BankAccount(342434534534L, "Viktor", 1000);
-        BankAccount maria = new BankAccount(67890, "Maria", 500);
-        BankAccount anna = new BankAccount(11111, "Anna");
+        Car KIA = new Car("Kia", "Storeh", 2004, 12334455);
+        Car BMV = new Car("Bmv", "V8", 2015, 89457349);
 
-        System.out.println("Всего создано счетов: " + BankAccount.getCount());
-
-        viktor.showBalance();
-        maria.showBalance();
-        anna.showBalance();
-
-        viktor.deposit(200);
-        viktor.withdraw(300);
-        viktor.transfer(maria, 400);
-        viktor.addInterest(5);
-
-        viktor.displayAccountInfo();
-        maria.displayAccountInfo();
+        KIA.displayInfo();
+        KIA.applyDiscount(15);
+        KIA.getCarAge(KIA.getYears());
+        KIA.priceComparison(
+                KIA.getPrice(),
+                KIA.getModel(),
+                BMV.getPrice(),
+                BMV.getModel()
+        );
     }
 }

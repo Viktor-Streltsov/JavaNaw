@@ -10,7 +10,7 @@ public class Main {
 
         //      TODO  Метод для проверки, содержит ли массив определённый элемент
 
-        arrayUtils.faindEelm(arrayUtils.getArrItem());
+        arrayUtils.findElem(arrayUtils.getArrItem());
 
         //      TODO  Метод для сортировки массива по возрастанию
 

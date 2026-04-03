@@ -74,7 +74,18 @@ public class ArrayUtils {
     }
 
     public void sortArr(int[] arr) {
-        Arrays.sort(arr);
+//        Arrays.sort(arr);
+
+        for(int i = arr.length - 1; i >= 1; i--) {
+            for(int j = 0; j < i; j++) {
+                if(arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
 
         for(int item : arr) {
             System.out.print(item + " ");
@@ -89,6 +100,17 @@ public class ArrayUtils {
         }
 
         return arr[length - 1] + recursiveSum(arr,length - 1);
+    }
+
+    public int[] concatArr(int[] arr1, int[] arr2) {
+
+        int[] result = new int[arr1.length + arr2.length];
+        System.arraycopy(arr1, 0, result,0, arr1.length);
+        System.arraycopy(arr2, 0, result, arr1.length, arr2.length);
+
+        System.out.println(Arrays.toString(result));
+
+        return result;
     }
 
 }

@@ -1,16 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Car KIA = new Car("Kia", "Storeh", 2004, 12334455);
-        Car BMV = new Car("Bmv", "V8", 2015, 89457349);
+        ArrayUtils arrayUtils = new ArrayUtils();
 
-        KIA.displayInfo();
-        KIA.applyDiscount(15);
-        KIA.getCarAge(KIA.getYears());
-        KIA.priceComparison(
-                KIA.getPrice(),
-                KIA.getModel(),
-                BMV.getPrice(),
-                BMV.getModel()
-        );
+        arrayUtils.maxItem(arrayUtils.getArrItem());
+        arrayUtils.minItem(arrayUtils.getArrItem());
+        arrayUtils.reversArr(arrayUtils.getArrItem());
+//        arrayUtils.faindEelm(arrayUtils.getArrItem());
+        arrayUtils.sortArr(arrayUtils.getArrAll());
+        System.out.println(arrayUtils.recursiveSum(arrayUtils.getArrAll(), arrayUtils.getArrAll().length));
+
     }
 }
